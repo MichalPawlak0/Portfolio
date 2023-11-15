@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn--mobile-nav {
+  transform: skewY(-5deg);
+  display: none;
+}
+
+.icon--mobile-nav {
+  font-size: clamp(6rem, 15vw, 8rem);
+  color: #4d6d86;
+}
+
+.icon--mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .btn--mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+}

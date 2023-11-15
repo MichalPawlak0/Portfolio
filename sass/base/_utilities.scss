@@ -1,0 +1,22 @@
+.section__work-image.active {
+  opacity: 1;
+}
+.section__work-image.dimmed {
+  opacity: 0.1;
+}
+.underline {
+  position: relative;
+  z-index: -1;
+}
+.underline::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  transition: width 0.2s cubic-bezier(0.3, 0.3, 0.34, -0.13);
+  border-bottom: 0.08em solid currentColor;
+  width: 100%;
+}

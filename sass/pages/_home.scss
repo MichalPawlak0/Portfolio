@@ -1,0 +1,452 @@
+/* ///////////////////////////// */
+/* HERO*/
+.section__hero {
+  height: clamp(50vh, 40vw, 58vh);
+  padding: 0.2rem 3.2rem;
+  &-container {
+    max-width: 148rem;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding: clamp(0rem, 6vw, 8rem) 0 0 0;
+    justify-content: space-between;
+  }
+  &-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    font-size: clamp(4rem, 6vw, 12rem);
+    color: $color-grey-4;
+    & > .section__hero-greeting {
+      width: fit-content;
+      animation-name: fadeFromBottom;
+      animation-duration: 1s;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        letter-spacing: clamp(0.2rem, 0.5vw, 1rem);
+        text-shadow: clamp(0.2rem, 0.5vw, 1rem) clamp(0.2rem, 0.5vw, 1rem)
+          $color-grey-2;
+      }
+    }
+    h1 {
+      width: fit-content;
+      animation: fadeFromBottom 1.5s ease-in-out 1s backwards;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        letter-spacing: clamp(0.2rem, 0.5vw, 0.5rem);
+        text-shadow: clamp(0.2rem, 0.5vw, 1rem) clamp(0.2rem, 0.5vw, 1rem)
+          $color-grey-2;
+      }
+    }
+  }
+  &-scroll-down-text {
+    color: $color-grey-2;
+    font-size: 1.618rem;
+    text-align: end;
+    align-self: flex-end;
+    animation: fadeFromBottom 1.5s ease-in-out 3s backwards;
+    transition: letter-spacing 0.3s ease-in-out;
+    &:hover {
+      letter-spacing: clamp(0.05rem, 0.2vw, 0.1rem);
+    }
+  }
+}
+/* ///////////////////////////// */
+/* WORK */
+.section__work {
+  &-container {
+    padding: 11.089rem 2.628rem 0 2.628rem;
+    max-width: 204rem;
+    margin: 0 auto;
+  }
+  &-images {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -25vw;
+    a {
+      width: fit-content;
+      transition: all 0.3s ease-out;
+      font-size: 4.854rem;
+      color: #fff;
+      &:hover {
+        z-index: 1;
+        scale: 1.2;
+      }
+      &:nth-child(1) {
+        align-self: flex-start;
+        transform: translateX(10%);
+      }
+      &:nth-child(2) {
+        align-self: center;
+        transform: translateY(-16vw);
+      }
+      &:nth-child(3) {
+        align-self: flex-end;
+        transform: translate(-10%, -30vw);
+      }
+    }
+  }
+  &-image {
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    video {
+      border-radius: 5rem;
+      height: clamp(10rem, 22vw, 48rem);
+    }
+    &:hover {
+      .section__work-website-name {
+        font-size: clamp(1rem, 3.5vw, 8.054rem);
+        text-shadow: clamp(0.1rem, 0.25vw, 0.4rem) clamp(0.1rem, 0.2vw, 0.3rem)
+          $color-grey-2;
+      }
+      &::after {
+        animation: darken 0.2s ease-out 0.7s both, glare 0.3s ease both;
+        outline: solid rgba($color-grey-2, 0.25) 80vh;
+      }
+    }
+    &::after {
+      position: absolute;
+      text-align: center;
+      top: 0;
+      left: 0;
+      width: 100.1%;
+      height: 98%;
+      content: "";
+      background-image: linear-gradient(
+        180deg,
+        rgba(0, 11, 20, 0.7) 0%,
+        rgba(9, 21, 40, 0.7) 72%
+      );
+      border-radius: 5rem;
+      transition: box-shadow 0.3s;
+    }
+    &--omnifood {
+      &::before {
+        content: "Omnifood is a mockup website of an AI-based food delivery company. Fully responsive.";
+        max-width: 70%;
+        top: 50%;
+        right: -115%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 0;
+        text-decoration: none;
+        cursor: none;
+        font-size: 0;
+        transition: all 0.8s ease-in-out 0.8s;
+      }
+      &:hover::before {
+        font-size: clamp(0.6rem, 1.2vw, 2.4rem);
+        padding-right: 1rem;
+        margin-left: 1rem;
+      }
+    }
+    &--law {
+      &::before {
+        content: "Website made for an individual law firm. Made with Wordpress with customizations.";
+        max-width: 70%;
+        top: -12%;
+        right: 0;
+        transform: translateX(-20%);
+        position: absolute;
+        font-size: 0;
+        text-decoration: none;
+        cursor: none;
+        font-size: 0;
+        transition: all 0.8s ease-in-out 0.8s;
+      }
+      &:hover::before {
+        font-size: clamp(0.8rem, 1.2vw, 2.4rem);
+      }
+    }
+    &--fkp {
+      &::before {
+        content: "A site made for a big food chain based in Poland. Made with Wordpress. Customizations.";
+        top: 50%;
+        left: -42%;
+        max-width: 70%;
+        transform: translate(-50%, -50%);
+        text-align: right;
+        position: absolute;
+        font-size: 0;
+        text-decoration: none;
+        cursor: none;
+        font-size: 0;
+        transition: all 0.8s ease-in-out 0.8s;
+      }
+      &:hover::before {
+        font-size: clamp(0.8rem, 1.2vw, 2.4rem);
+      }
+    }
+    &--natours {
+      &::before {
+        content: "Natours is a mockup touring service made primarily with flexbox. Fully responsive.";
+        max-width: 70%;
+        top: 50%;
+        right: -110%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 0;
+        text-decoration: none;
+        cursor: none;
+        font-size: 0;
+        transition: all 0.8s ease-in-out 0.8s;
+      }
+      &:hover::before {
+        font-size: clamp(0.8rem, 1.2vw, 2.4rem);
+      }
+    }
+    &--zana {
+      &::before {
+        content: "A website for an elegant restaurant in Poland. Made with Wordpress.";
+        max-width: 70%;
+        top: -12%;
+        right: 0;
+        transform: translateX(-20%);
+        position: absolute;
+        font-size: 0;
+        text-decoration: none;
+        cursor: none;
+        font-size: 0;
+        transition: all 0.8s ease-in-out 0.8s;
+      }
+      &:hover::before {
+        font-size: clamp(0.8rem, 1.2vw, 2.4rem);
+      }
+    }
+    &--nexter {
+      &::before {
+        content: "Nexter is a mockup real estate agency. Made primarily using grid. Fully responsive.";
+        top: 50%;
+        left: -35%;
+        max-width: 70%;
+        transform: translate(-50%, -50%);
+        text-align: right;
+        position: absolute;
+        font-size: 0;
+        text-decoration: none;
+        cursor: none;
+        font-size: 0;
+        transition: all 0.8s ease-in-out 0.8s;
+      }
+      &:hover::before {
+        font-size: clamp(0.8rem, 1.2vw, 2.4rem);
+      }
+    }
+  }
+  &-website-name {
+    font-size: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, 0%);
+    transition: all 0.5s ease-in-out 0.4s;
+    width: max-content;
+  }
+  &-box:nth-child(2) {
+    margin-top: -20%;
+  }
+  @media only screen and (max-width: 53em) {
+    &-images {
+      margin-bottom: 0;
+      gap: 1vw;
+      a {
+        align-self: flex-start !important;
+        transform: none !important;
+      }
+    }
+    &-box {
+      margin-top: 5% !important;
+    }
+    &-image--omnifood::before,
+    &-image--fkp::before,
+    &-image--law::before,
+    &-image--natours::before,
+    &-image--zana::before,
+    &-image--nexter::before {
+      font-size: clamp(0.6rem, 2.2vw, 2.4rem);
+      max-width: 100%;
+      top: 50%;
+      right: -110%;
+      transform: translateY(-50%);
+      left: unset;
+      text-align: left;
+    }
+    &-image--omnifood:hover::before,
+    &-image--fkp:hover::before,
+    &-image--law:hover::before,
+    &-image--natours:hover::before,
+    &-image--zana:hover::before,
+    &-image--nexter:hover::before {
+      font-size: 3vw;
+    }
+    // &-image::after {
+    //   content: unset;
+    // }
+  }
+  @media only screen and (max-width: 35em) {
+    &-images {
+      text-align: center;
+      gap: 5rem;
+      a {
+        align-self: center !important;
+        text-decoration: none;
+      }
+    }
+    &-image--omnifood::before,
+    &-image--fkp::before,
+    &-image--law::before,
+    &-image--natours::before,
+    &-image--zana::before,
+    &-image--nexter::before {
+      font-size: clamp(1.2rem, 2.2vw, 2.4rem);
+      position: unset;
+      display: inline-block;
+      text-align: start;
+    }
+    &-image video {
+      height: 50vw;
+      margin-top: -2%;
+    }
+    &-image::after {
+      top: unset;
+      bottom: 2%;
+      height: 83%;
+    }
+    &-website-name {
+      top: 50%;
+      font-size: clamp(1rem, 7.5vw, 6rem) !important;
+    }
+  }
+}
+@media only screen and (max-width: 53em) {
+  .section__about {
+    margin-top: 5% !important;
+  }
+}
+/* ///////////////////////////// */
+/* ABOUT */
+.section__about {
+  margin-top: -20%;
+  background: linear-gradient(to left top, $color-grey-2, #fff);
+  color: $color-accent-1;
+  transform: skewY(5deg);
+  .section__description:hover {
+    text-shadow: clamp(0.1rem, 0.25vw, 0.75rem) clamp(0.1rem, 0.2vw, 0.5rem)
+      $color-accent-2;
+  }
+  &-container {
+    padding: 11.089rem 2.628rem 0 2.628rem;
+    max-width: 204rem;
+    margin: 0 auto;
+    transform: skewY(-5deg);
+    color: $color-grey-6;
+  }
+  &-textbox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5.5rem clamp(1rem, 5vw, 2.4rem);
+    gap: clamp(3.2rem, 5%, 5rem);
+  }
+}
+.my-history > *:hover,
+.credentials > * > *:hover {
+  scale: 1.01;
+  text-decoration: underline;
+  transition: all 0.2s;
+}
+.my-history {
+  flex: 1 1 40%;
+}
+.my-history .heading-tertiary:nth-of-type(2),
+.experience .heading-tertiary,
+.certifications .heading-tertiary {
+  border-top: 1px solid $color-accent-1;
+  padding-top: 3rem;
+  width: 100%;
+}
+.credentials {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+}
+.education {
+  display: inline-block;
+}
+.experience {
+  display: inline-block;
+}
+/* ///////////////////////////// */
+/* TECHNOLOGIES */
+.section__technologies {
+  margin-bottom: 8vw;
+  &-container {
+    padding: 11.089rem 2.628rem 0 2.628rem;
+    max-width: 204rem;
+    margin: 0 auto;
+    height: clamp(45rem, 40vw, 60rem);
+    .section__description {
+      margin-bottom: clamp(2rem, 8vw, 8rem);
+    }
+  }
+}
+/* ///////////////////////////// */
+/* CONTACT */
+.section__contact {
+  padding: 11.089rem 2.628rem 11rem 2.628rem;
+  max-width: 204rem;
+  margin: 0 auto 5vw;
+  background: linear-gradient(to left top, $color-grey-2, #fff);
+  color: $color-grey-6;
+  transform: skewY(5deg);
+  .section__description {
+    margin-bottom: 3vw;
+    @media only screen and (min-width: 60rem) {
+      margin-bottom: 10vw;
+      &:hover {
+        text-shadow: clamp(0.1rem, 0.25vw, 0.75rem) clamp(0.1rem, 0.2vw, 0.5rem)
+          $color-accent-2;
+      }
+    }
+  }
+  &:not(.section__description) {
+    text-align: center;
+  }
+}
+.contact__container {
+  transform: skewY(-5deg);
+}
+.contact-form__info {
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-evenly;
+}
+.contact-form__link:link,
+.contact-form__link:visited {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+  font-size: clamp(2rem, 4vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  transition: all 0.3s;
+  z-index: 10000;
+}
+.contact-form__link:hover {
+  transform: scale(1.05) translateY(-0.2vw);
+  filter: contrast(2);
+  text-shadow: clamp(0.2rem, 0.3vw, 0.8rem) clamp(0.2rem, 0.3vw, 0.8rem)
+    $color-accent-2;
+}
+.contact-form__link:active {
+  transform: scale(1.02) translateY(-0.1rem);
+}
+.contact-form__icon {
+  height: clamp(5rem, 5vw, 5vw);
+}

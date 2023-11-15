@@ -1,0 +1,16 @@
+.header {
+  height: clamp(40vh, calc(50rem - 30vw), 50vh);
+  display: flex;
+  gap: clamp(2rem, 15vw, 8rem);
+  justify-content: space-between;
+  padding: 8rem clamp(1rem, 5vw, 8rem) 8rem clamp(1rem, 5vw, 8rem);
+  align-items: center;
+  transform: skew(0deg, 5deg) translateY(-4.6vw);
+  background: linear-gradient(to right top, $color-grey-2, #fff);
+  transition: transform 0.4s;
+  animation: appear 1s 2.5s backwards;
+  &__logo {
+    width: clamp(15rem, 15vw, 20rem);
+    transform: skew(0deg, -5deg) translateY(4.2vw);
+  }
+}
