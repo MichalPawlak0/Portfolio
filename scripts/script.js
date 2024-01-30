@@ -130,3 +130,7 @@ function addObserver(el, options) {
 scrollTrigger(".section__work-image", {
   rootMargin: "-12.5%",
 });
+
+//Fill the footer with the current year
+let yearSpanEl = document.querySelector(".current-year");
+yearSpanEl.textContent = new Date().getFullYear();
